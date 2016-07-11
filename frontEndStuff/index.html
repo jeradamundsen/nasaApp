@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="nasaApp">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+    <title>Nasa Flight</title>
+  </head>
+  <body>
+  <div class="container">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a ui-sref="trenzalore" class="navbar-brand">Where The Dr Can't Go</a>
+      <a ui-sref="launch" class="navbar-brand">Power Up Tardis</a>
+      <a ui-sref="about" class="navbar-brand">Greatness of Space</a>
+      <a ui-sref="spacerocks" class="navbar-brand">Asteroids</a>
+      <a ui-sref="meteoriteMap" class="navbar-brand">Meteorite Map</a>
+    </div>
+  </nav>
+    <h1>Now You See Me</h1>
+    <p>
+      what is gravity,
+      solar winds, charged particles, magnetosphere, interplanetary space, bow of juno inter specrogram(plasma wave data) bow shock(sonic boom fastest indian), polar magnetosphere(polar lights on earth vs jovian aurora ) million apm electrical current
+    </p>
+  </div>
+  </div>
+<section class="mid">
+
+
+  <ui-view></ui-view>
+
+
+</section>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHJLzXZSK0y-xQRP1e1rSo25hiuBwjtwY"></script>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="./app.js"></script>
+  <script src="./controllers/mainCtrl.js"></script>
+  <script src="./mainService.js"></script>
+  <script src="./controllers/mapController.js"></script>
+
+  </body>
+</html>
