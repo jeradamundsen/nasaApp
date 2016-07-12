@@ -7,26 +7,30 @@ angular.module('nasaApp', ['ui.router'])
             $stateProvider
                 .state('about', {
                     url: '/',
-                    templateUrl: "/views/about-tmpl.html"
+                    templateUrl: "./views/about.html"
                 })
                 .state('trenzalore', {
                     url: '/trenzalore',
-                    templateUrl: "/views/trenzalore-tmpl.html",
+                    templateUrl: "./views/trenzalore.html"
                     // controller: 'mainCtrl'
                 })
                 .state('spacerocks', {
                     url: '/spacerocks',
-                    templateUrl: "/views/spacerocks-tmpl.html",
+                    templateUrl: "./views/spacerocks.html"
                     // controller: 'mainCtrl'
                 })
                 .state('launch', {
                     url: '/launch',
-                    templateUrl: "/views/launch-tmpl.html",
+                    templateUrl: "./views/launch.html"
                     // controller: 'mainCtrl'
                 })
                 .state('meteoriteMap', {
                         url: '/meteoriteMap',
-                        templateUrl: "/views/listMeteoriteInfo-tmpl.html",
-                        controller: 'mapController'
+                        templateUrl: "./views/listMeteoriteInfo.html"
+                        // controller: 'mapController'
+                })
+                .state('chartMain', {
+                        url: '/chartMain',
+                        templateUrl:"./views/chart-main.html"
                 })
 });

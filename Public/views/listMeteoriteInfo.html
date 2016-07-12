@@ -1,0 +1,10 @@
+
+
+<div ng-controller="mapController">
+  <input type="search" placeholder="latitude" ng-model="latitude" value="0">
+  <input type="search" placeholder="longitude" ng-model="longitude" value="0"/>
+  <button type="submit" value="search" ng-click="initMap( latitude, longitude )">Search</button>
+  
+  <div action="getMeteoriteMap" id="mapDiv" style="width: 100%; height: 500px; margin: 20px 20px; boarder: solid 5px blue;"></div>
+
+</div>

@@ -6,27 +6,17 @@
 var express= require ('express');
 var bodyParser= require('body-parser')
 var mongoose= require('mongoose');
+var port= 8010;
+
 var masterRoutes = require('./server/masterRoutes')
-var UserController = require('./controllers/UserController')
+var UserControllers= require('.Controllers/UserController')
 
 var app = express();
-var port= 8010;
-const mongoUri= `mongoUri://localhost:27017`;
-
-mongoose.connect(mongoUri);
-mongoose.connection.once(`open`,function(){
-  console.log(`Connected to mongo at ` + mongoUri)
-})
 
 app.use(bodyParser.json());
 
-// endpoints user
-app.post('user', UserController.create);
-app.put('user', UserController.update);
-app.delete('user', UserController.delete);
 
-
-
+app.post('/users', UserController.create);
 
 app.listen(port, function(){
   console.log('Express listening on '+ port)

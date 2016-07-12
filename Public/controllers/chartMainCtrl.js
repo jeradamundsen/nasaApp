@@ -8,7 +8,7 @@ var landingsAvg = 0.0;
 var metrics = [];
 
 
-function buildLine(){
+$scope.buildLine = function (){
   var lineFun = d3.svg.line()
     //  var yearRange = 1972   need a function that will loop through data
         .x(function(d){return d.year; })
@@ -28,7 +28,7 @@ function buildLine(){
     });
 }
 
-  function showTotals(){
+  $scope.showTotals= function (){
     var t= d3.select("div").append("table");
     //get total
     for(var i=0; i<ds.length; i++){
@@ -38,7 +38,8 @@ function buildLine(){
     landingsAvg = landingsTotal / ds.length
     metrics.push("Landings Total: " + landingsTotal);
     metrics.push("Average Meteorite Landings " + landingsAvg);
-    function showHeader(ds) {
+
+    $scope.showHeader = function (ds) {
         d3.select("div").append("h1")
             .text(ds.category) + " Meteorite Landing");
     }
@@ -60,7 +61,7 @@ d3.json("https://data.nasa.gov/resource/gh4g-9sfh.json", function(error, data){
     }
         buildLine();
         showTotals();
-        showHeader(); 
+        showHeader();
 
 
     data.contents.forEach(function(ds){

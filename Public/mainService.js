@@ -29,10 +29,6 @@ this.getMeteoriteLanding=function(){
   })
 }
 
-// this.getMap=function(){
-//   return $http({
-//     method:'GET',
-//     url: "https://maps.googleapis.com/maps/api/js?key=AIzaSyC-xnzXjoAGXWxkfeA-Agwt0L8Po87Zp4gAIzaSyC-xnzXjoAGXWxkfeA-Agwt0L8Po87Zp4g"
-//   })
-// }
+
+
 })
