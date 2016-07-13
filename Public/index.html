@@ -11,36 +11,66 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 
-    <title>Nasa Flight</title>
+    <title>NasaApp</title>
   </head>
+
   <body>
-  <div class="container">
-  <nav class="navbar navbar-default">
-    <div class="navbar-header">
-      <a ui-sref="trenzalore" class="navbar-brand">Where The Dr Can't Go</a>
-      <a ui-sref="launch" class="navbar-brand">Power Up Tardis</a>
-      <a ui-sref="about" class="navbar-brand">Greatness of Space</a>
-      <a ui-sref="spacerocks" class="navbar-brand">Asteroids</a>
-      <a ui-sref="meteoriteMap" class="navbar-brand">Meteorite Map</a>
-      <a ui-sref="meteoriteMap" class="navbar-brand">Meteorite Chart</a>
-    </div>
-  </nav>
-    <h1>Now You See Me</h1>
-    <p>
-      what is gravity,
-      solar winds, charged particles, magnetosphere, interplanetary space, bow of juno inter specrogram(plasma wave data) bow shock(sonic boom fastest indian), polar magnetosphere(polar lights on earth vs jovian aurora ) million apm electrical current
-    </p>
-  </div>
-  </div>
+    <header>
+      <a ui-sref="login">My Space Rocks Login</span></a>
+    </header>
 
-<section class="mid">
+      <div class="container">
 
 
-  <ui-view></ui-view>
+
+          <nav class="pdsa-sn-wrapper">
+              <ul>
+                  <li class="pdsa-sn-brand">
+                  <a ui-sref="about" class=" ">About</a>
+                  </li>
+                  <li>
+                      <a ui-sref="trenzalore">
+                          <span class="visible-sm visible-md visible-lg">Trenzalore</span>
+                          <i class="glyphicon glyphicon-home visible-xs"></i></a>
+                  </li>
+                  <li>
+                      <a ui-sref="asteroidInfo"> <span class="visible-sm visible-md visible-lg">Asteroids</span></a>
+                  </li>
+                  <li>
+                      <a ui-sref="launch"> <span class="visible-sm visible-md visible-lg">Launch</span>
+                          <i class="glyphicon glyphicon-globe visible-xs"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a ui-sref="meteoriteMap"><span class="visible-sm visible-md visible-lg">Meteorite Landings</span>
+                      <i class="glyphicon glyphicon-music visible-xs"></i></a>
+                  </li>
+                  <li>
+                      <a ui-sref="meteoriteChart"><span class="visible-sm visible-md visible-lg">Meteorite Chart</span>
+                      <i class="glyphicon glyphicon-download visible-xs"></i>
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+
+      <div class="container-body-content">
+          <div class="row">
+              <div class="col-xs-10 col-lg-12">
+                  <h1>
+              To Infinity and Beyond
+                </h1>
+                <div>
+                  <ui-view> </ui-view>
+                </div>
 
 
-</section>
 
+
+              </div>
+          </div>
+      </div>
+</body>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHJLzXZSK0y-xQRP1e1rSo25hiuBwjtwY"></script>
@@ -53,6 +83,7 @@
   <script src="./controllers/mainCtrl.js"></script>
   <script src="./mainService.js"></script>
   <script src="./controllers/mapController.js"></script>
-
+<script src="./controllers/chartMainCtrl.js"></script>
+<script src="./controllers/asteroidCtrl.js"></script>
   </body>
 </html>

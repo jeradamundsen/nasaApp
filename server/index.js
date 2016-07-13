@@ -6,24 +6,25 @@
 var express= require ('express');
 var bodyParser= require('body-parser')
 var mongoose= require('mongoose');
-var masterRoutes = require('./server/masterRoutes')
 var UserController = require('./controllers/UserController')
 
 var app = express();
 var port= 8010;
-const mongoUri= `mongoUri://localhost:27017`;
+const mongoURI= `mongodb://localhost:27017`;
 
-mongoose.connect(mongoUri);
+app.use( express.static(`${__dirname}/../Public`) );
+
+mongoose.connect(mongoURI);
 mongoose.connection.once(`open`,function(){
-  console.log(`Connected to mongo at ` + mongoUri)
+  console.log(`Connected to mongo at: `, mongoURI)
 })
 
 app.use(bodyParser.json());
 
 // endpoints user
-app.post('user', UserController.create);
-app.put('user', UserController.update);
-app.delete('user', UserController.delete);
+app.post('/api/user', UserController.create);
+app.put('/api/user', UserController.update);
+app.delete('/api/user', UserController.delete);
 
 
 

@@ -4,6 +4,7 @@ var User= require('../models/User')
 module.exports = {
 
 create: function(req, res) {
+  console.log(req.body);
   User.insert(req.body, function(err,result){
     if ( err ) {
       return res.status( 500 ).json( err );

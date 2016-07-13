@@ -16,4 +16,15 @@ angular.module('nasaApp')
 
             })
         }
+
+
+
+      
+
+        $scope.createUser = function(user) {
+          mainService.createUser(user);
+        };
+
+
+
     });

@@ -14,9 +14,9 @@ angular.module('nasaApp', ['ui.router'])
                     templateUrl: "./views/trenzalore.html"
                     // controller: 'mainCtrl'
                 })
-                .state('spacerocks', {
-                    url: '/spacerocks',
-                    templateUrl: "./views/spacerocks.html"
+                .state('asteroidInfo', {
+                    url: '/asteroidInfo',
+                    templateUrl: "./views/asteroidInfo.html"
                     // controller: 'mainCtrl'
                 })
                 .state('launch', {
@@ -29,8 +29,12 @@ angular.module('nasaApp', ['ui.router'])
                         templateUrl: "./views/listMeteoriteInfo.html"
                         // controller: 'mapController'
                 })
-                .state('chartMain', {
-                        url: '/chartMain',
+                .state('meteoriteChart', {
+                        url: '/meteoriteChart',
                         templateUrl:"./views/chart-main.html"
+                })
+                .state('login',{
+                    url:'/login',
+                    templateUrl:"./views/login.html"
                 })
 });
