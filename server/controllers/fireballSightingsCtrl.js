@@ -2,8 +2,10 @@ var Fireballs = require('../models/Fireballs')
 
 module.exports = {
 
-create: function(req, res){
-  Fireballs.insert(req.body, function(err, result){
+createReport: function(req, res){
+  Fireballs.create(req.body, function(err, result){
+
+    console.log(req.body)
     if ( err ) {
         return res.status( 500 ).json( err );
     } else{
@@ -19,7 +21,7 @@ getMany: function(req, res){
     } else {
       res.json(result);
     }
-  }
+  })
 },
 
 update: function(req, res){

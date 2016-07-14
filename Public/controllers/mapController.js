@@ -2,7 +2,7 @@ angular.module('nasaApp')
     .controller('mapController', function($scope, mainService) {
 
         $scope.initMap = (lat, lon) => {
-            mainService.getMeteoriteLanding().then(function(response, req) {
+            mainService.getMeteoriteMap().then(function(response, req) {
                 console.log(response)
                 for (var i = 0; i < response.data.length; i++) {
                   console.log(response.data[i].name);

@@ -1,1 +1,48 @@
-div><img src="http://www.amsmeteors.org/imo/img/fireball.png" alt="meteorlogo" />
+<div>
+<header>
+  <h2>Look, up in the sky! It's a bird, it's a plane, it's...A Fireball</h2>
+</header>
+<h3>Record fireball occurance</h3>
+<form ng-controller="formController">
+Address where you observed the fireball
+<input type="text" placeholder="address observed" ng-model="address"/><br />
+Direction you were facing when you observed fireball
+<input type="number" placeholder="0-360 degrees" ng-model="direction_facing"/><br />
+Date you observed fireball
+<input type="date" ng-model="date"/><br />
+Where according to horizon you observed fireball
+<select name="location">
+<option value="">at horizon</option>
+<option value="">above horizon</option>
+<option value="">below horizon</option>
+</select><br />
+How bright was the fireball
+<select name="brightness">Brightness
+<option value="">not as bright as the moon</option>
+<option value="">bright as the moon</option>
+<option value="">bright as the sun</option>
+<option value="">somewhere inbetween</option></select><br />
+Color of fireball
+<input type="text" placeholder="color" ng-model="fireball_color"><br/>
+Sound associated with fireball
+<select name="sound">
+<option value="">concurrent</option>
+<option value="">delayed</option></select><br />
+was there a smoke trail
+<select>
+  <option value="">yes</option>
+  <option value="">no</option>
+</select><br />
+Submit Report
+<input type="submit" ng-click="createReport(report)">
+</form>
+</div>
+<!-- where observed
+// direction facing 0-360
+// how high from horizon angle 0-180
+// date dirty
+//bightness -4 to -28  bright as moon in middle as sun -28
+//color
+// sounds associated with it  concurrent or delayed
+// smoke trail /train
+// terminal flash -->

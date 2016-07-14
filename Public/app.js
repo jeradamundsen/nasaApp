@@ -2,11 +2,11 @@ angular.module('nasaApp', ['ui.router', 'ui.filters'])
     .config(
       function($stateProvider, $urlRouterProvider) {
 
-            $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise('/about');
 
             $stateProvider
                 .state('about', {
-                    url: '/',
+                    url: '/about',
                     templateUrl: "./views/about.html"
                 })
                 .state('trenzalore', {
@@ -36,5 +36,15 @@ angular.module('nasaApp', ['ui.router', 'ui.filters'])
                 .state('login',{
                     url:'/login',
                     templateUrl:"./views/login.html"
+                })
+                .state('reportFireball',{
+                    url:'/reportFireball',
+                    templateUrl:"./views/reportFireball.html",
+                    controller: "mainCtrl"
+                })
+                .state('thanks',{
+                    url:'/thanks',
+                    templateUrl:"./views/thanks.html",
+                    controller: "mainCtrl"
                 })
 });

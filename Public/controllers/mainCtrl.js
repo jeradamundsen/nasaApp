@@ -22,22 +22,13 @@ angular.module('nasaApp')
 
 
         $scope.createUser = function(user) {
-          mainService.createUser(user);
+          mainService.createUser(user).then(function(result){
+            console.log("hit")
+            $scope.newUser=result.data;
+            $state.go("reportFireball")
+          });
         };
 
 
 
     });
-
-
-
-
-
-
-
-
-
-
-
-
-    

@@ -6,6 +6,7 @@
   margin-top: 0.5em;
   width: 85%;
   height: 100%;
+
 }
 header{
   padding: 0.7em;
@@ -14,7 +15,10 @@ header{
   font-size: large;
   width: 100%;
 }
-
+.bgimg{
+  background-image: url("http://hairymnstr.com/files/uploads/stargate1024x768.png");
+  text-align: center;
+}
 header a{
   background-color: gray;
   color: white;

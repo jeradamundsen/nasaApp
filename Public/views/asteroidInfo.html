@@ -5,8 +5,11 @@
     </header>
   </div>
 <h4>Your Birthday Asteroid</h4>
-<input type="search" placeholder="date -can be your birthday" ng-model="date">
-<button type="submit" value"search" ng-click="getAsteroidInfo()">Search</button>
+<input type="search" placeholder="date -can be your birthday"
+
+ng-model="beginingdate">
+
+<button type="submit" value"search" ng-click="getAsteroidInfo(date)">Search</button>
 
 <div>
   {{nearMisses}}

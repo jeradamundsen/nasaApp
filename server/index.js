@@ -11,23 +11,27 @@ var landingsCtrl = require('./controllers/landingsCtrl');
 var fireballSightingsCtrl = require('./controllers/fireballSightingsCtrl');
 
 var app = express();
-var port= 8010;
+var port= 9797;
 const mongoURI= `mongodb://localhost:27017`;
 
-app.use( express.static(`${__dirname}/../Public`) );
+app.use( express.static( __dirname + "./../Public") );
+app.use(bodyParser.json());
 
 mongoose.connect(mongoURI);
 mongoose.connection.once(`open`,function(){
   console.log(`Connected to mongo at: `, mongoURI)
 })
 
-app.use(bodyParser.json());
 
-// endpoints user
+
+
+
+// endpoints
 app.route('/api/user')
   .post(UserController.create)
-  .put(UserController.update);
+  .put(UserController.update)
   .delete(UserController.delete);
+
 
 app.route('/api/landings')
   .post(landingsCtrl.create)
@@ -36,7 +40,7 @@ app.route('/api/landings')
   .delete(landingsCtrl.deleteById)
 
 app.route('/api/sightings')
-  .post(fireballSightingsCtrl.create)
+  .post(fireballSightingsCtrl.createReport)
   .get(fireballSightingsCtrl.getMany)
   .put(fireballSightingsCtrl.update)
   .delete(fireballSightingsCtrl.deleteById)
