@@ -1,4 +1,4 @@
-angular.module('nasaApp', ['ui.router'])
+angular.module('nasaApp', ['ui.router', 'ui.filters'])
     .config(
       function($stateProvider, $urlRouterProvider) {
 

@@ -1,6 +1,13 @@
-<div ng-controller="chartMainCtrl">
+<div ng-controller="chartMainCtrl" >
 
 
-<input ng-model="query" placeholder="4 digit year" type="number"/>
-<button ng-click="getMeteoriteLandingByDate()">Submit</button>
-{{landingList}}
+<input ng-model="query" placeholder="4 digit year"/>
+<button ng-click="getMeteoriteLandingByDate(query)">Submit</button>
+<div><span>Total number of meteorite landings </span>{{filtered.length}}</div>
+<div ng-repeat="landing in landingList | unique: 'name' | unique: 'latitude' | unique: 'longitude'">
+  <ul>
+    <li>{{landing.name}}</li>
+    <li>{{landing.latitude}}</li>
+    <li>{{landing.longitude}}</li>
+  </ul>
+</div>

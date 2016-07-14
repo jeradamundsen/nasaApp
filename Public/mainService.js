@@ -25,7 +25,7 @@ this.getAsteroidInfo=function(){
 this.getMeteoriteLanding=function(query){
   return $http({
     method:'GET',
-    url:("https://data.nasa.gov/resource/gh4g-9sfh.json/?" + query)
+    url:"https://data.nasa.gov/resource/gh4g-9sfh.json?year=" + query
 
   })
 }

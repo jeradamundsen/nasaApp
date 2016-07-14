@@ -6,7 +6,9 @@
 var express= require ('express');
 var bodyParser= require('body-parser')
 var mongoose= require('mongoose');
-var UserController = require('./controllers/UserController')
+var UserController = require('./controllers/UserController');
+var landingsCtrl = require('./controllers/landingsCtrl');
+var fireballSightingsCtrl = require('./controllers/fireballSightingsCtrl');
 
 var app = express();
 var port= 8010;
@@ -22,9 +24,24 @@ mongoose.connection.once(`open`,function(){
 app.use(bodyParser.json());
 
 // endpoints user
-app.post('/api/user', UserController.create);
-app.put('/api/user', UserController.update);
-app.delete('/api/user', UserController.delete);
+app.route('/api/user')
+  .post(UserController.create)
+  .put(UserController.update);
+  .delete(UserController.delete);
+
+app.route('/api/landings')
+  .post(landingsCtrl.create)
+  .get(landingsCtrl.getMany)
+  .put(landingsCtrl.update)
+  .delete(landingsCtrl.deleteById)
+
+app.route('/api/sightings')
+  .post(fireballSightingsCtrl.create)
+  .get(fireballSightingsCtrl.getMany)
+  .put(fireballSightingsCtrl.update)
+  .delete(fireballSightingsCtrl.deleteById)
+
+
 
 
 
