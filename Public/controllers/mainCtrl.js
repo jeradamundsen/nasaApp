@@ -33,9 +33,16 @@ var curretUser;
         };
 
         $scope.createReport = function(report){
-          mainService.createReport(report,currentUser._id).then(function(result){
+          var count=0;
+          report.reportedBy =currentUser._id; // creatingreportedby propety on report object
+          mainService.createReport(report).then(function(result){
+                // count+=
                 console.log(result)
+                console.log("got Report")
+                $scope.newReport = result.data;
+                $state.go("thanks")
           })
+          // $scope.count=count;
         }
 
 

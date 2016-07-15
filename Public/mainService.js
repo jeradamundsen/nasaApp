@@ -45,16 +45,14 @@ this.createUser=function(user){
     url:"/api/user"
   })
 }
-this.createReport = function(report, userid){
+this.createReport = function(report){
   return $http({
     method:'POST',
-    data: {
-      report: report,
-      _id: userid
-    }
+    data: report,
     url:'/api/sightings'
   })
 }
+
 this.generateMeteoriteLandingIds = function(landingList){
   return $http({
     method:'PUT',

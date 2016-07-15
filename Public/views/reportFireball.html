@@ -1,61 +1,80 @@
 <div ng-controller='mainCtrl'>
-<header>
-  <h2>Look, up in the sky! It's a bird, it's a plane, it's...A Fireball</h2>
-</header>
-<h3>Record fireball occurance</h3>
-<form ng-controller="formController">
-Address where you observed the fireball
-<input type="text" placeholder="address observed" ng-model="report.address"/><br />
-Direction you were facing when you observed fireball
-<input type="number" placeholder="0-360 degrees" ng-model="report.direction_facing"/><br />
-Date you observed fireball
-<input type="date" ng-model="report.date"/><br />
-Where according to horizon you observed fireball
-<select name="location" ng-model="report.location_observed_at">
-<option value="">at horizon</option>
-<option value="">above horizon</option>
-<option value="">below horizon</option>
-</select><br />
-How bright was the fireball
-<select name="brightness" ng-model="report.brightness">Brightness
-<option value="">-4</option>
-<option value="">-5</option>
-<option value="">-6</option>
-<option value="">-7</option>
-<option value="">-8</option>
-<option value="">-9</option>
-<option value="">-10</option>
-<option value="">-11</option>
-<option value="">-12</option>
-<option value="">-13</option>
-<option value="">-14</option>
-<option value="">-15</option>
-<option value="">-16</option>
-<option value="">-17</option>
-<option value="">-18</option>
-<option value="">-19</option>
-<option value="">-20</option>
-<option value="">-21</option>
-<option value="">-22</option>
-<option value="">-23</option>
-<option value="">-24</option>
-</select>
+    <header>
+      <h2>Look, up in the sky! It's a bird, it's a plane, it's...A Fireball</h2>
+    </header>
+<form role="form">
+  <h3>Record fireball occurance</h3>
+<div class="form-group">
+  <label for="inputAddress">Address where you observed the fireball</label>
+  <input type="text" class="form-control" placeholder="address observed" ng-model="report.address" />
+</div>
+<div class="form-group">
+  <label for="inputDirectionFacing">Direction you were facing when you observed fireball</label>
+  <input type="number" class="form-control" placeholder="0-360 degrees" ng-model="report.direction_facing"/>
+</div>
 
-<br />
-Color of fireball
-<input type="text" placeholder="color" ng-model="report.fireball_color"><br/>
-Sound associated with fireball
-<select name="sound">
-<option value="">concurrent</option>
-<option value="">delayed</option></select><br />
-was there a smoke trail
-<select>
+<div class="form-group">
+  <label for="inputDate">Date you observed fireball</label>
+  <input type="date"  class="form-control" ng-model="report.date"/><br />
+</div>
+<!-- <div class="form-control"> -->
+  <label for="inputWhere">Where according to horizon you observed fireball</label>
+  <select name="location" class="form-control" ng-model="report.height_above_horizon">
+  <option value="">at horizon</option>
+  <option value="">above horizon</option>
+  <option value="">below horizon</option>
+  </select>
+<!-- </div> -->
+
+
+<!-- <div class="form-control"> -->
+  <label for="inputBrightness">How bright was the fireball</label>
+  <select name="brightness" ng-model="report.brightness" class="form-control">Brightness
+    <option value="">-4</option>
+    <option value="">-5</option>
+    <option value="">-6</option>
+    <option value="">-7</option>
+    <option value="">-8</option>
+    <option value="">-9</option>
+    <option value="">-10</option>
+    <option value="">-11</option>
+    <option value="">-12</option>
+    <option value="">-13</option>
+    <option value="">-14</option>
+    <option value="">-15</option>
+    <option value="">-16</option>
+    <option value="">-17</option>
+    <option value="">-18</option>
+    <option value="">-19</option>
+    <option value="">-20</option>
+    <option value="">-21</option>
+    <option value="">-22</option>
+    <option value="">-23</option>
+    <option value="">-24</option>
+    </select>
+<!-- </div> -->
+
+<div class="form-control">
+  <label for="inColor">Color of fireball</label>
+  <input type="text" class="form-contrl" placeholder="color" ng-model="report.color">
+</div>
+<!-- <div class="form-control"> -->
+  <label for="inputSound">Sound associated with fireball</label>
+  <select name="sound" class="form-control" ng-model="report.associated_sound">
+  <option value="">concurrent</option>
+  <option value="">delayed</option>
+  </select>
+<!-- </div> -->
+<!-- <div class="form-control"> -->
+  <label for="inputTrail">was there a smoke trail</label>
+  <select class="form-control" ng-model="report.visual">
   <option value="">yes</option>
   <option value="">no</option>
-</select><br />
-Submit Report
-<input type="submit" ng-click="createReport(report)">
-</form>
+  </select>
+<!-- </div> -->
+<button type="submit" class="btn btn-primary" ng-click="createReport(report)">Submit</button>
+
+  </form>
 </div>
 <!-- where observed
 // direction facing 0-360

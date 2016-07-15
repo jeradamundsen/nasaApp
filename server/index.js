@@ -13,7 +13,7 @@ var fireballSightingsCtrl = require('./controllers/fireballSightingsCtrl');
 var app = express();
 var port= 9797;
 const mongoURI= `mongodb://localhost:27017`;
-
+// const mongoURI= `mongodb://localhost:27017/nasaApp`;future database name currently called test
 app.use( express.static( __dirname + "./../Public") );
 app.use(bodyParser.json());
 
@@ -43,7 +43,7 @@ app.route('/api/landingsOld').put(landingsCtrl.updateMany)
 
 app.route('/api/sightings')
   .post(fireballSightingsCtrl.createReport)
-  .get(fireballSightingsCtrl.getMany)
+  .get(fireballSightingsCtrl.getAllFireballs)
   .put(fireballSightingsCtrl.update)
   .delete(fireballSightingsCtrl.deleteById)
 

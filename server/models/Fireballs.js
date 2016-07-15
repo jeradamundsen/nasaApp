@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var schema = require('./User.js')
+var User = require('./User.js')
 var Landingsschema = require('./Landings.js')
 
 var Fireballschema = new mongoose.Schema({
@@ -14,16 +14,9 @@ date: {type: Date},
 height_above_horizon: {type: Number},
 brightness: {type: Number, min:-4, max:-28 },
 color: {type: String},
-asssociated_sounds: {type:String},
+associated_sound: {type:String},
 visual: {type: String},
-reportedBy: [
-
-    { type: mongoose.Schema.Types.ObjectId, ref:'User'}
-  ],
-
-meteorite_landings_same_year: [
-  { type: mongoose.Schema.Types.ObjectId, ref:'Landings'}
-]
+reportedBy:{type: mongoose.Schema.Types.ObjectId, ref:'User'}
 })
 
 module.exports = mongoose.model('Fireballs', Fireballschema)
