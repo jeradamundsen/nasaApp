@@ -21,6 +21,8 @@ header{
 .bgimg{
   background-image:  url("http://hairymnstr.com/files/uploads/stargate1024x768.png");
   text-align: center;
+  height:800px;
+  width: 100%;
 }
 header a{
   background-color: gray;

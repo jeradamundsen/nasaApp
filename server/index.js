@@ -1,8 +1,3 @@
-// api key nasa
-// zIlXift9VAR1yyq399jiX6ix21xmDhjf4LL2p0Sk
-
-
-//https://api.nasa.gov/planetary/apod?api_key=zIlXift9VAR1yyq399jiX6ix21xmDhjf4LL2p0Sk
 var express= require ('express');
 var bodyParser= require('body-parser')
 var mongoose= require('mongoose');

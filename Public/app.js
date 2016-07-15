@@ -47,4 +47,9 @@ angular.module('nasaApp', ['ui.router', 'ui.filters'])
                     templateUrl:"./views/thanks.html",
                     controller: "mainCtrl"
                 })
+                .state('verifyFireball',{
+                    url:'/verifyFireball',
+                    templateUrl: "./views/verifyFireball.html",
+                    controller: "mainCtrl"
+                })
 });
