@@ -8,12 +8,12 @@ angular.module('nasaApp')
     })
   }
 
-this.getMarsInfo=function(){
-  return $http({
-    method:'GET',
-    url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=zIlXift9VAR1yyq399jiX6ix21xmDhjf4LL2p0Sk"
-  })
-}
+// this.getMarsInfo=function(){
+//   return $http({
+//     method:'GET',
+//     url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=zIlXift9VAR1yyq399jiX6ix21xmDhjf4LL2p0Sk"
+//   })
+// }
 
 this.getAsteroidInfo=function(date){
   return $http({
@@ -45,13 +45,22 @@ this.createUser=function(user){
     url:"/api/user"
   })
 }
-this.createReport = function(report){
+this.createReport = function(report, userid){
   return $http({
     method:'POST',
-    data: report,
+    data: {
+      report: report,
+      _id: userid
+    }
     url:'/api/sightings'
   })
 }
-
+this.generateMeteoriteLandingIds = function(landingList){
+  return $http({
+    method:'PUT',
+    data: {landingList: landingList},
+    url: '/api/landingsOld'
+  })
+}
 
 })

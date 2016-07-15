@@ -20,25 +20,18 @@ angular.module('nasaApp').controller('chartMainCtrl', function($scope, $http, ma
                                     }  // closes object
                                       landingList.push(myObj);
 
-                            } // closes if statement
+                            }
+                            console.log(landingList) // closes if statement
                             $scope.landingList = landingList;
-                            // $scope.landingsTotal=landingList.length
 
-                        //     var duplicates=function(landingList){
-                        //       var uniqueLandings= [];
-                        //       var unique = landingList.name.sort();
-                        //       for(var i = 0; i<unique.length; i++) {
-                        //         if(unique[i] !== unique[i]){
-                        //           uniqueArr.push(unique[i])
-                        //         }
-                        //       }
-                        //      $scope.uniqueLandings= uniqueLandings;
-                        // } // closes duplicates
+                          }  mainService.generateMeteoriteLandingIds(landingList)
+                              .then(function(response){
+                                console.log(response)
+                              }
+                          )
 
-                }
-              })
+                })
+              }
 
 
-
-            }
           }) // closes the controller module

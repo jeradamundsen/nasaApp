@@ -1,17 +1,32 @@
 var mongoose = require('mongoose');
+var schema = require('./User.js')
+var Landingsschema = require('./Landings.js')
 
-var schema = new mongoose.Schema({
-location_observed_at:{type: String},
+var Fireballschema = new mongoose.Schema({
+// // location_observed_at: {geo_location:{
+// //   longitude: {type: Number},
+// //   latitude: {type: Number}
+// // }
+// },
+address: {type: String},
 direction_facing: {type: Number, min:0, max:360},
-date: {type:String},
+date: {type: Date},
 height_above_horizon: {type: Number},
 brightness: {type: Number, min:-4, max:-28 },
 color: {type: String},
 asssociated_sounds: {type:String},
-visual: {type: String}
+visual: {type: String},
+reportedBy: [
+
+    { type: mongoose.Schema.Types.ObjectId, ref:'User'}
+  ],
+
+meteorite_landings_same_year: [
+  { type: mongoose.Schema.Types.ObjectId, ref:'Landings'}
+]
 })
 
-module.exports = mongoose.model('Fireballs', schema)
+module.exports = mongoose.model('Fireballs', Fireballschema)
 
 
 

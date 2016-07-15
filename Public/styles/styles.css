@@ -6,6 +6,9 @@
   margin-top: 0.5em;
   width: 85%;
   height: 100%;
+  /*background-image: url("http://apod.nasa.gov/apod/image/1607/NGC1309Jeff_full.jpg");*/
+  /*background-size: 800px 900px;*/
+  background-position: 25% 75%
 
 }
 header{
@@ -16,7 +19,7 @@ header{
   width: 100%;
 }
 .bgimg{
-  background-image: url("http://hairymnstr.com/files/uploads/stargate1024x768.png");
+  background-image:  url("http://hairymnstr.com/files/uploads/stargate1024x768.png");
   text-align: center;
 }
 header a{

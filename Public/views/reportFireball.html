@@ -1,29 +1,49 @@
-<div>
+<div ng-controller='mainCtrl'>
 <header>
   <h2>Look, up in the sky! It's a bird, it's a plane, it's...A Fireball</h2>
 </header>
 <h3>Record fireball occurance</h3>
 <form ng-controller="formController">
 Address where you observed the fireball
-<input type="text" placeholder="address observed" ng-model="address"/><br />
+<input type="text" placeholder="address observed" ng-model="report.address"/><br />
 Direction you were facing when you observed fireball
-<input type="number" placeholder="0-360 degrees" ng-model="direction_facing"/><br />
+<input type="number" placeholder="0-360 degrees" ng-model="report.direction_facing"/><br />
 Date you observed fireball
-<input type="date" ng-model="date"/><br />
+<input type="date" ng-model="report.date"/><br />
 Where according to horizon you observed fireball
-<select name="location">
+<select name="location" ng-model="report.location_observed_at">
 <option value="">at horizon</option>
 <option value="">above horizon</option>
 <option value="">below horizon</option>
 </select><br />
 How bright was the fireball
-<select name="brightness">Brightness
-<option value="">not as bright as the moon</option>
-<option value="">bright as the moon</option>
-<option value="">bright as the sun</option>
-<option value="">somewhere inbetween</option></select><br />
+<select name="brightness" ng-model="report.brightness">Brightness
+<option value="">-4</option>
+<option value="">-5</option>
+<option value="">-6</option>
+<option value="">-7</option>
+<option value="">-8</option>
+<option value="">-9</option>
+<option value="">-10</option>
+<option value="">-11</option>
+<option value="">-12</option>
+<option value="">-13</option>
+<option value="">-14</option>
+<option value="">-15</option>
+<option value="">-16</option>
+<option value="">-17</option>
+<option value="">-18</option>
+<option value="">-19</option>
+<option value="">-20</option>
+<option value="">-21</option>
+<option value="">-22</option>
+<option value="">-23</option>
+<option value="">-24</option>
+</select>
+
+<br />
 Color of fireball
-<input type="text" placeholder="color" ng-model="fireball_color"><br/>
+<input type="text" placeholder="color" ng-model="report.fireball_color"><br/>
 Sound associated with fireball
 <select name="sound">
 <option value="">concurrent</option>

@@ -5,11 +5,11 @@ module.exports = {
 
 create: function(req, res) {
   console.log(req.body)
-  User.create(req.body, function(err,result){
+  User.create (req.body, function(err,result){
     if ( err ) {
       return res.status( 500 ).json( err );
     }else {
-    res.json(result);
+     return res.json(result);
     }
   })
 },

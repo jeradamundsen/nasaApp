@@ -39,6 +39,8 @@ app.route('/api/landings')
   .put(landingsCtrl.update)
   .delete(landingsCtrl.deleteById)
 
+app.route('/api/landingsOld').put(landingsCtrl.updateMany)
+
 app.route('/api/sightings')
   .post(fireballSightingsCtrl.createReport)
   .get(fireballSightingsCtrl.getMany)
