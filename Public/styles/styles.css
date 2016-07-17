@@ -1,3 +1,63 @@
+
+.heading-primary{
+  text-align: center;
+  font-size: 220%;
+  padding: 40px 0;
+
+}
+
+.nasa-block{
+  text-align: center;
+
+}
+
+}
+
+.nasa-each-asset{
+  margin: 0 0 20px 0;
+
+}
+
+.nasa-each {
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 600px) {
+  .nasa-each {
+    width: 50%;
+    float: left;
+}
+}
+
+
+@media only screen and (min-width: 900px){
+  .nasa-each {
+    width: 33.33%;
+
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .nasa-each {
+    width: 25 %;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container{
   width:100%;
 }
@@ -9,7 +69,6 @@
   /*background-image: url("http://apod.nasa.gov/apod/image/1607/NGC1309Jeff_full.jpg");*/
   /*background-size: 800px 900px;*/
   background-position: 25% 75%
-
 }
 header{
   padding: 0.7em;
@@ -18,11 +77,13 @@ header{
   font-size: large;
   width: 100%;
 }
-.bgimg{
-  background-image:  url("http://hairymnstr.com/files/uploads/stargate1024x768.png");
-  text-align: center;
-  height:800px;
-  width: 100%;
+
+.text {
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 30px;
+    width: 100%
 }
 header a{
   background-color: gray;
@@ -127,4 +188,4 @@ input:required {
     margin-left: -3em;
   }
 
-}
+}*
