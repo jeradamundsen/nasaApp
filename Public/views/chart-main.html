@@ -6,7 +6,7 @@
 <input ng-model="query" placeholder="4 digit year"/>
 <button ng-click="getMeteoriteLandingByDate(query)">Submit</button>
 <div>
-<span>Total number of meteorite landings </span>{{filtered.length}}</div>
+<span>Total number of meteorite landings </span></div>
 <div ng-repeat="landing in landingList | unique: 'name' | unique: 'latitude' | unique: 'longitude'">
   <ul>
     <li>{{landing.name}}</li>

@@ -1,13 +1,28 @@
-<div ng-controller='mainCtrl'>
+
+<div ng-controller='formController' class="container-main">
     <header>
       <h2>Look, up in the sky! It's a bird, it's a plane, it's...A Fireball</h2>
     </header>
+
 <form role="form">
   <h3>Record fireball occurance</h3>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" placeholder="Name" ng-model="report.name" />
+  </div>
 <div class="form-group">
   <label for="inputAddress">Address where you observed the fireball</label>
   <input type="text" class="form-control" placeholder="address observed" ng-model="report.address" />
 </div>
+  <div class="form-group">
+    <label for="inputlongitude">Longitude</label>
+    <input type="text" class="form-control" placeholder="longitude" ng-model="report.geo_location.longitude" />
+  </div>
+  <div class="form-group">
+    <label for="latitude">latitude</label>
+    <input type="degree" class="form-control" placeholder="latitude" ng-model="report.geo_location.latitude"
+  </div>
+
 <div class="form-group">
   <label for="inputDirectionFacing">Direction you were facing when you observed fireball</label>
   <input type="number" class="form-control" placeholder="0-360 degrees" ng-model="report.direction_facing"/>
@@ -15,7 +30,7 @@
 
 <div class="form-group">
   <label for="inputDate">Date you observed fireball</label>
-  <input type="date"  class="form-control" ng-model="report.date"/><br />
+  <input type="date"  class="form-control" ng-model="report.date"/>
 </div>
 <!-- <div class="form-control"> -->
   <label for="inputWhere">Where according to horizon you observed fireball</label>
@@ -51,8 +66,8 @@
     <option value="">-22</option>
     <option value="">-23</option>
     <option value="">-24</option>
-    </select>
-<!-- </div> -->
+  </select>
+
 
 <div class="form-control">
   <label for="inColor">Color of fireball</label>
@@ -61,27 +76,20 @@
 <!-- <div class="form-control"> -->
   <label for="inputSound">Sound associated with fireball</label>
   <select name="sound" class="form-control" ng-model="report.associated_sound">
-  <option value="">concurrent</option>
-  <option value="">delayed</option>
+    <option value="">concurrent</option>
+    <option value="">delayed</option>
   </select>
-<!-- </div> -->
-<!-- <div class="form-control"> -->
+
   <label for="inputTrail">was there a smoke trail</label>
   <select class="form-control" ng-model="report.visual">
   <option value="">yes</option>
   <option value="">no</option>
   </select>
-<!-- </div> -->
-<button type="submit" class="btn btn-primary" ng-click="createReport(report)">Submit</button>
-
-  </form>
+<div class="button">
+  <button type="submit" class="btn btn-primary" ng-click="createReport(report)">Submit</button>
 </div>
-<!-- where observed
-// direction facing 0-360
-// how high from horizon angle 0-180
-// date dirty
-//bightness -4 to -28  bright as moon in middle as sun -28
-//color
-// sounds associated with it  concurrent or delayed
-// smoke trail /train
-// terminal flash -->
+</form>
+</div>
+<div class="sticky-footer">
+  <img src="https://tctechcrunch2011.files.wordpress.com/2016/07/dscovr-orbit.jpg?w=525&h=406" class="pull-left" height="200" width="200" />
+</div>

@@ -8,13 +8,6 @@ angular.module('nasaApp')
     })
   }
 
-// this.getMarsInfo=function(){
-//   return $http({
-//     method:'GET',
-//     url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=zIlXift9VAR1yyq399jiX6ix21xmDhjf4LL2p0Sk"
-//   })
-// }
-
 this.getAsteroidInfo=function(date){
   return $http({
     method:'GET',
@@ -58,6 +51,13 @@ this.generateMeteoriteLandingIds = function(landingList){
     method:'PUT',
     data: {landingList: landingList},
     url: '/api/landingsOld'
+  })
+}
+
+this.getReports = function(){
+  return $http({
+    method:'GET',
+    url:'/api/sightings'
   })
 }
 

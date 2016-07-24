@@ -9,9 +9,9 @@ angular.module('nasaApp', ['ui.router', 'ui.filters'])
                     url: '/about',
                     templateUrl: "./views/about.html"
                 })
-                .state('trenzalore', {
-                    url: '/trenzalore',
-                    templateUrl: "./views/trenzalore.html"
+                .state('hubbleTelescope', {
+                    url: '/hubbleTelescope',
+                    templateUrl: "./views/hubbleTelescope.html"
                     // controller: 'mainCtrl'
                 })
                 .state('asteroidInfo', {
@@ -57,4 +57,17 @@ angular.module('nasaApp', ['ui.router', 'ui.filters'])
                   templateUrl: "./views/verifyFireball.html",
                   controller: "mainCtrl"
                 })
+                .state('fireballEvents',{
+                  url:'/fireballEvents',
+                  templateUrl: "./views/fireballEvents.html",
+                  controller:"mainCtrl"
+                })
 });
+
+// .directive('footer', function(){
+//   return {
+//     restrict: 'A',
+//     templateUrl: "./dirs/footer.html",
+//     controller: 'mainCtrl'
+//   };
+// });

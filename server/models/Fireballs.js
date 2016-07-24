@@ -8,7 +8,12 @@ var Fireballschema = new mongoose.Schema({
 // //   latitude: {type: Number}
 // // }
 // },
+name: {type: String},
 address: {type: String},
+geo_location:{
+  longitude: {type: Number},
+  latitude: {type:Number}
+},
 direction_facing: {type: Number, min:0, max:360},
 date: {type: Date},
 height_above_horizon: {type: Number},

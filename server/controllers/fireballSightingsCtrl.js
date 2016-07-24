@@ -2,6 +2,19 @@ var Fireballs = require('../models/Fireballs')
 var User = require('../models/User.js')
 module.exports = {
 
+ getReports: function(req,res){
+   Fireballs.find({},function(err, result){
+
+    // return res.status(200).json(result)
+   })
+   .populate("reportedBy")
+   .exec(function(err,fireballpopulated){
+
+     return res.status(200).json(fireballpopulated);
+   })
+ },
+
+
 createReport: function(req, res){
   Fireballs.create(req.body, function(err, result){
     if ( err ) {
@@ -9,23 +22,6 @@ createReport: function(req, res){
     }
     return res.status(200).json(result)
     })
-},
-// getFireballByUserId: function(req, res){
-//   Fireballs.find({"fireballs":req.params.id}, function(err,fireBallFound){})
-//   .populate('reportedBy')
-//   .exec((err, fireBallPop)=>{
-//     return res.json(fireBallPop);
-// }
-getAllFireballs: function(req, res){
-  Fireballs.find({})
-   .populate('reportedBy')
-  .exec(function(err, result){
-    if ( err ) {
-        return res.status( 500 ).json( err );
-    } else {
-      return res.json(result);
-    }
-  })
 },
 
 update: function(req, res){

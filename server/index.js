@@ -38,9 +38,10 @@ app.route('/api/landingsOld').put(landingsCtrl.updateMany)
 
 app.route('/api/sightings')
   .post(fireballSightingsCtrl.createReport)
-  .get(fireballSightingsCtrl.getAllFireballs)
+  .get(fireballSightingsCtrl.getReports)
   .put(fireballSightingsCtrl.update)
   .delete(fireballSightingsCtrl.deleteById)
+
 
 
 
