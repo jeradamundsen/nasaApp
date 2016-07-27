@@ -7,7 +7,7 @@ var fireballSightingsCtrl = require('./controllers/fireballSightingsCtrl');
 
 var app = express();
 var port= 9797;
-const mongoURI= `mongodb://theSoviet1984:spaceship1@ds029735.mlab.com:29735/spaceshipdb`;
+const mongoURI= `mongodb://fireball:geo_location@ds029735.mlab.com:29735/spaceshipdb`;
 // const mongoURI= `mongodb://localhost:27017/nasaApp`;future database name currently called test
 app.use( express.static( __dirname + "./../Public") );
 app.use(bodyParser.json());
