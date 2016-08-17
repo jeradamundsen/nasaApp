@@ -1,4 +1,4 @@
-angular.module('nasaApp', ['ui.router', 'ui.filters'])
+angular.module('nasaApp', ['ui.router', 'ui.filters', 'ngMaterial', 'ui.bootstrap'])
     .config(
       function($stateProvider, $urlRouterProvider) {
 
@@ -25,13 +25,18 @@ angular.module('nasaApp', ['ui.router', 'ui.filters'])
                     // controller: 'mainCtrl'
                 })
                 .state('meteoriteMap', {
-                        url: '/meteoriteMap',
-                        templateUrl: "./views/listMeteoriteInfo.html"
+                    url: '/meteoriteMap',
+                    templateUrl: "./views/listMeteoriteInfo.html"
                         // controller: 'mapController'
                 })
                 .state('meteoriteChart', {
-                        url: '/meteoriteChart',
-                        templateUrl:"./views/chart-main.html"
+                    url: '/meteoriteChart',
+                    templateUrl:"./views/chart-main.html"
+
+                })
+                .state('mapPage',{
+                    url:'/mapPage',
+                    templateUrl: "./views/mapPage.html"
                 })
                 .state('login',{
                     url:'/login',

@@ -1,16 +1,18 @@
-<div class="container-trenzalore-body-content" ng-controller="mainCtrl" ng-init="getImageData()">
-
-      <div>
-        <h1>Hubble Telescope Picture Of The Day</h1>
+<div class="container-fluid" ng-controller="mainCtrl" ng-init="getImageData()">
+      <div class="row">
+        <h3 class="col-md-8">Hubble Telescope Picture Of The Day</h3>
       </div>
-      <div>
-        {{imageData.title}}
+      <div class="row">
+        <h3 class="col-md-8">{{imageData.title}}</h3>
       </div>
-      <div>
+      <div class="row">
         <img class="img_of_day" ng-src="{{imageData.hdurl}}" alt="npod">
-      <div class="bottom-trenzalore-container">{{imageData.explanation}}
       </div>
-  </div>
-
+      <div class="row">
+        <div>
+          {{imageData.explanation}}
+        </div>
+      </div>
+</div>
 
 <!-- need to format so it looks like user is viewing from inside space shuttle or like its hanging on the wall.   -->

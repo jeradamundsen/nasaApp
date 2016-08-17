@@ -7,23 +7,23 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/styles.css">
 
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./styles/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+    <div class="container">
     <div id="navbar-img">
     </div>
-
-    <div class="container example2" id="navbar-headerMe">
+    <div class="container-fluid example2" id="navbar-headerMe">
       <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
               <span class="sr-only">Toggle navigation</span>
@@ -32,7 +32,7 @@
               <span class="icon-bar"></span>
             </button>
           </div>
-          <div id="navbar2" class="navbar-collapse collapse">
+          <div id="navbar2" class="navbar-collapse collapse col-lg-12 col-md-12">
             <ul class="nav navbar-nav navbar-right">
               <li><a ui-sref="reportFireball"> Report a Fireball</a></li>
               <li><a ui-sref="fireballEvents"> Recent Fireball Events</a></li>
@@ -42,6 +42,7 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-space-shuttle fa-spinner fa-spin" aria-hidden="true"></i>Your Spaceship<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
+
                   <li><a ui-sref="hubbleTelescope">Hubble Telescope Pictures</a></li>
                   <li><a ui-sref="asteroidInfo">Track Asteroids</a></li>
                   <li><a ui-sref="launch">Upload fireball pictures</a></li>
@@ -56,29 +57,33 @@
         </div>
       </nav>
     </div>
-    <div class="container">
+    </div>
+    <div class="container-fluid">
       <div class="row">
-        <h1 class="dispaly-2">Fireball Chasers</h1>
+        <h1 class="display-2">Fireball Chasers</h1>
       </div>
       <div class="row">
                           <ui-view> </ui-view>
       </div>
-    </div>
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHJLzXZSK0y-xQRP1e1rSo25hiuBwjtwY"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHJLzXZSK0y-xQRP1e1rSo25hiuBwjtwY&sensor=false"></script>
 
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.css">
-    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-aria.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.2/ui-bootstrap.min.js"></script>
     <script src="./app.js"></script>
     <script src="./controllers/mainCtrl.js"></script>
     <script src="./mainService.js"></script>
