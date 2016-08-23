@@ -14,20 +14,28 @@ this.getAsteroidInfo=function(date){
     url: "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=zIlXift9VAR1yyq399jiX6ix21xmDhjf4LL2p0Sk?begin_date=" + date + "end_date=" + date
   })
 }
+//
+// this.getMeteoriteLanding=function(query){
+//   return $http({
+//     method:'GET',
+//     url:"https://data.nasa.gov/resource/y77d-th95.json?api_key=
+// i-n8GaT-ioXykyOVTM4RWiykey_D-2cyr8dK?year="+ query
+//
+//   })
+// }
 
-this.getMeteoriteLanding=function(query){
+// this.getMeteoriteMap=function(){
+//   return $http({
+//     method:'GET',
+//     url:"https://data.nasa.gov/resource/gh4g-9sfh.json?fall=fell"
+//
+//   })
+// }
+
+this.getLandings = function(newQuery){
   return $http({
     method:'GET',
-    url:"https://data.nasa.gov/resource/gh4g-9sfh.json?year=" + query
-
-  })
-}
-
-this.getMeteoriteMap=function(){
-  return $http({
-    method:'GET',
-    url:"https://data.nasa.gov/resource/gh4g-9sfh.json?year="
-
+    url: "https://data.nasa.gov/resource/gh4g-9sfh.json?year="+ newQuery
   })
 }
 this.createUser=function(user){

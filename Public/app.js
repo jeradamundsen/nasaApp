@@ -1,4 +1,4 @@
-angular.module('nasaApp', ['ui.router', 'ui.filters', 'ngMaterial', 'ui.bootstrap'])
+angular.module('nasaApp', ['ui.router', , 'ngMaterial', 'ui.bootstrap'])
     .config(
       function($stateProvider, $urlRouterProvider) {
 
@@ -66,6 +66,10 @@ angular.module('nasaApp', ['ui.router', 'ui.filters', 'ngMaterial', 'ui.bootstra
                   url:'/fireballEvents',
                   templateUrl: "./views/fireballEvents.html",
                   controller:"mainCtrl"
+                })
+                .state('meteoriteClassification',{
+                  url: '/meteoriteClassification',
+                  templateUrl:'./views/meteoriteClassification.html'
                 })
 });
 
