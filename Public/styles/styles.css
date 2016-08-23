@@ -33,6 +33,9 @@ h1 {
 #blocks{
   margin: 20px;
 }
+.meteoriteTable{
+  margin: 0 auto;
+}
 .wrapper
 article {
   margin-bottom: 20px;
