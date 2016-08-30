@@ -1,5 +1,5 @@
 angular.module('nasaApp')
-.service('mainService', function($http,$stateParams){
+.service('mainService', function($http,$stateParams, $q){
 
   this.getImageInfo=function(){
     return $http({
@@ -31,12 +31,32 @@ this.getAsteroidInfo=function(date){
 //
 //   })
 // }
-
-this.getLandings = function(newQuery){
+this.getMeteoriteType =function(meteoriteType){
   return $http({
     method:'GET',
-    url: "https://data.nasa.gov/resource/gh4g-9sfh.json?year="+ newQuery
+    url: "https://data.nasa.gov/resource/y77d-th95.json?recclass="+ meteoriteType
   })
+}
+this.getLandings = function(newQuery){
+  var def =$q.defer();
+   $http.get('https://data.nasa.gov/resource/y77d-th95.json?year='+ newQuery
+ ).then(function(response){
+    var myResponse = response.data
+    console.log(myResponse)
+    var meteoriteData = []
+    for(var i = 0; i < myResponse.length; i++){
+      var obj = {
+        name: myResponse[i].name,
+        mass: parseFloat(myResponse[i].mass),
+        type: myResponse[i].recclass
+        // latitude: myResponse[i].reclat,
+        // longititude: myResponse[i].reclong
+      };
+      meteoriteData.push(obj);
+    }
+    def.resolve(meteoriteData)
+  })
+  return def.promise;
 }
 this.createUser=function(user){
   console.log(user);
@@ -68,5 +88,5 @@ this.getReports = function(){
     url:'/api/sightings'
   })
 }
-
+var meteorites= []
 })
