@@ -114,9 +114,23 @@ input, select, form {
 
 /*#aboutparagraphleft{*/
   margin-left: 20px;
+.specialTh{
+  cursor: pointer;
 }
-.grid {
-  height: 400px;
-  width: 400px;
-  border: 1px solid black;
+
+.arrow-up{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid black;
+  display: inline-block;
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid black;
+  display: inline-block;
 }

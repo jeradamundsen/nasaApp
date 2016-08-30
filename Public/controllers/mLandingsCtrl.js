@@ -1,24 +1,32 @@
 angular.module('nasaApp').controller('mLandingsCtrl', function($scope, mainService){
-
-$scope.sortProp = '-name'
-$scope.sortDirection = false;
+$scope.sortColumn="mass";
+$scope.reverseSort= false;
+$scope.sortData = function(column){
+  $scope.reverseSort = ($scope.sortColumn == column)? !$scope.reverseSort : false; $scope.sortColumn= column
+}
+$scope.getSortClass=function(column){
+  if($scope.sortColumn == column){
+    return $scope.reverseSort ? 'arrow-down': 'arrow-up'
+  }
+  return '';
+}
 // $scope.$watch("meteorite.reclong")
 // $scope.$watch("meteorite.reclat")
 
-$scope.gridOptions = {
-        data: 'meteoriteData',
-        sortInfo: {fields: ['Mass', 'Type'], directions: ['asc']},
-        columnDefs: [
-          {field:'name', displayName:'Name'}, {field:'mass', displayName:'Mass(g)'},{field:'type', displayName:'Type'}]
-    };
+// $scope.gridOptions = {
+//         data: 'meteoriteData',
+//         sortInfo: {fields: ['Mass', 'Type'], directions: ['asc']},
+//         columnDefs: [
+//           {field:'name', displayName:'Name'}, {field:'mass', displayName:'Mass(g)'},{field:'type', displayName:'Type'}]
+//     };
 
   $scope.meteoriteLandings= function(query){
     var newQuery = $scope.query+ "-01-01T00:00:00"
     mainService.getLandings(newQuery).then(function(meteoriteData){
-      console.log(meteoriteData)
+    $scope.meteoriteDataCenter = meteoriteData
       // $scope.latitude = response.data.reclat;
       // $scope.longitude = response.data.reclong;
-$scope.meteoriteData=meteoriteData;
+
     })
 }
     // $scope.meteoriteTypes= function(meteoriteType){
