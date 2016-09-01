@@ -1,4 +1,4 @@
-angular.module('nasaApp', ['ui.router', 'ngMaterial', 'ui.bootstrap', 'ngGrid'])
+angular.module('nasaApp', ['ui.router', 'ngMaterial', 'ui.bootstrap'])
     .config(
       function($stateProvider, $urlRouterProvider) {
 

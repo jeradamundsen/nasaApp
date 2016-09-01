@@ -35,6 +35,7 @@ h1 {
 }
 .meteoriteTable{
   margin: 0 auto;
+  padding: 0 15px 0 15px;
 }
 .wrapper
 article {
@@ -117,7 +118,10 @@ input, select, form {
 .specialTh{
   cursor: pointer;
 }
-
+.yearSearch {
+  display: flex;
+  justify-content: center;
+}
 .arrow-up{
   width: 0;
   height: 0;
@@ -133,4 +137,8 @@ input, select, form {
   border-right: 5px solid transparent;
   border-bottom: 10px solid black;
   display: inline-block;
+}
+#footer {
+  height: 140px;
+  background-color: grey;
 }
