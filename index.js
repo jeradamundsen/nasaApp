@@ -1,9 +1,9 @@
 var express= require ('express');
 var bodyParser= require('body-parser')
 var mongoose= require('mongoose');
-var UserController = require('./controllers/UserController');
-var landingsCtrl = require('./controllers/landingsCtrl');
-var fireballSightingsCtrl = require('./controllers/fireballSightingsCtrl');
+var UserController = require('./server/controllers/UserController');
+var landingsCtrl = require('./server/controllers/landingsCtrl');
+var fireballSightingsCtrl = require('./server/controllers/fireballSightingsCtrl');
 
 var app = express();
 var port= process.env.PORT || 9797;
