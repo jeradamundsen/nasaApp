@@ -79,10 +79,12 @@ article h4{
   margin-right: auto;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-#navbar2{
-
+#navbab-img header{
+position: fixed;
+top: 0
 }
 h3 {
   text-align: center;
@@ -138,7 +140,24 @@ input, select, form {
   border-bottom: 10px solid black;
   display: inline-block;
 }
-#footer {
-  height: 140px;
+.site-footer, .page-wrap:after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 70px;
   background-color: grey;
+
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.imageToUse{
+
 }

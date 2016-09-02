@@ -20,7 +20,12 @@
 <!-- sort by mass  sort by type sort by location like angular friends  -->
           <td>{{data.name}}</td>
           <td>{{data.mass}}</td>
-          <td>{{data.type}}</td>
+          <td id="seeImages" ng-model="metType">{{data.type}}
+          <button ng-click="getImage(metType)">See Image of Meteorite Type</button>
+          <div class="imageToUse">
+            <a class="viewMeteoriteImage">View Meteorite Image</a>
+            <img ng-src="{{imageToUse}}">
+          </div></td>
 
 
           <!-- <td ng-click="modalCtrl.modalUpdate('lg')">{{data.latitude}},{{data.longititude}}</td> -->
