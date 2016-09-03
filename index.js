@@ -11,7 +11,7 @@ const mongoURI= `mongodb://fireball:geo_location@ds029735.mlab.com:29735/spacesh
  // const mongoURI= `mongodb://localhost:27017/nasaApp`;
  // future database name currently called test
 
-app.use( express.static( __dirname + "./Public") );
+app.use( express.static( __dirname + "/Public") );
 app.use(bodyParser.json());
 
 mongoose.connect(mongoURI);
