@@ -1,19 +1,24 @@
 
-<div class="row" ng-controller='mLandingsCtrl'>
-  <h3>Input Year To See Meteorites!</h3>
-<div id="meteoriteForm">
-  <form class="form form-inline">
-    <div>
-      <input ng-model="query" id="inputsm" placeholder="4-digit year" class="form-control input-sm col-lg-2">
-      <button type="button" name="button" ng-click="meteoriteLandings(query)" class="form-control">Search</button>
-  </div>
+<div ng-controller='mLandingsCtrl'>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 jumbotron">
+      <div class="text-center">
+      <h1>Input Year To See Meteorites!</h1>
+    <form class="form-inline">
+      <input ng-model="query" placeholder="4-digit year" class="form-control"><span class="help-block">Years 1801 through 2013 may be used</span>
+        <button type="button" name="button" ng-click="meteoriteLandings(query)" class="form-control btn btn-lg btn-danger">Search</button>
   </form>
+  </div>
+  </div>
+  </div>
 </div>
 <table class="table meteoriteTable">
         <tr>
           <th>Meteorite Name</th>
           <th ng-click="sortData('mass')" class="specialTh">Mass(g)<div ng-class="getSortClass('mass')"></div></th>
-          <th><label for="typeM">Filter:</label><input type="text" id="typeM" ng-model="typeSearch" placeholder="Meteorite Type"></th>
+          <th><label for="typeM">Filter:</label><input type="text" id="typeM" ng-model="typeSearch" placeholder="Meteorite Type"><span class="help-block">narrow results by type</span></th>
 
         </tr>
       <tr ng-repeat="data in meteoriteDataCenter | filter:typeSearch | orderBy:sortColumn:reverseSort">
@@ -21,10 +26,9 @@
           <td>{{data.name}}</td>
           <td>{{data.mass}}</td>
           <td id="seeImages" ng-model="metType">{{data.type}}
-          <button ng-click="getImage(metType)">See Image of Meteorite Type</button>
+          <button class="btn btn-sm form-control" ng-click="getImage(metType)">See Image of Meteorite Type</button>
           <div class="imageToUse">
-            <a class="viewMeteoriteImage">View Meteorite Image</a>
-            <img ng-src="{{imageToUse}}">
+            <img ng-src="{{correctImage}}">
           </div></td>
 
 
