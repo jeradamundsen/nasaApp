@@ -11,22 +11,42 @@ $scope.getSortClass=function(column){
   }
   return '';
 }
+// $scope.makeLocationObj=function(location){
+//   $scope.locationObj={
+//     lat: location.latitude,
+//     lng: location.longitude
+//   }
+// }
+$scope.display=true;
+$scope.getLocation = function(){
+  $scope.display = false;
+}
 
 
-$(document).ready(function(){
-  $('#seeImages').on('click', 'button', function(){
-    $(this).find('.imageToUse').slideDown();
-  });
-  $('#seeImages').on('click', 'viewMeteoriteImage',function(){
-    $(this).closest('.imageToUse').find('img').show()
-  })
-})
+// $(document).ready(function(){
+//   $('#seeImages').on('click', 'button', function(){
+//     $(this).find('.imageToUse').slideDown();
+//   });
+//   $('#seeImages').on('click', 'viewMeteoriteImage',function(){
+//     $(this).closest('.imageToUse').find('img').show()
+//   })
+// })
 
+$scope.latitudeCenter =[]
+$scope.longitudeCenter =[]
 // query meteorite api and match type for images//
   $scope.meteoriteLandings= function(query){
     var newQuery = $scope.query+ "-01-01T00:00:00"
     mainService.getLandings(newQuery).then(function(meteoriteData){
-    $scope.meteoriteDataCenter = meteoriteData
+    $scope.meteoriteDataCenter = meteoriteData;
+    $scope.total =meteoriteData.length;
+
+    for(var i=0; i<meteoriteData.length; i++){
+      $scope.latitudeCenter.push(meteoriteData[i].latitude)
+      $scope.longitudeCenter.push(meteoriteData[i].longitude)
+
+    }
+
   })
 }
 

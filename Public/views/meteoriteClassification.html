@@ -19,22 +19,18 @@
           <th>Meteorite Name</th>
           <th ng-click="sortData('mass')" class="specialTh">Mass(g)<div ng-class="getSortClass('mass')"></div></th>
           <th><label for="typeM">Filter:</label><input type="text" id="typeM" ng-model="typeSearch" placeholder="Meteorite Type"><span class="help-block">narrow results by type</span></th>
+          <th>lat,long</th>
+          <th>location</th>
+          <th>Total Found: {{total}}</th>
 
         </tr>
-      <tr ng-repeat="data in meteoriteDataCenter | filter:typeSearch | orderBy:sortColumn:reverseSort">
+      <tr ng-repeat="data in meteoriteDataCenter | filter:typeSearch | limitTo: 49 | orderBy:sortColumn:reverseSort">
 <!-- sort by mass  sort by type sort by location like angular friends  -->
           <td>{{data.name}}</td>
           <td>{{data.mass}}</td>
           <td id="seeImages" ng-model="metType">{{data.type}}
-          <button class="btn btn-sm form-control" ng-click="getImage(metType)">See Image of Meteorite Type</button>
-          <div class="imageToUse">
-            <img ng-src="{{correctImage}}">
-          </div></td>
-
-
-          <!-- <td ng-click="modalCtrl.modalUpdate('lg')">{{data.latitude}},{{data.longititude}}</td> -->
-          <!-- <td><reverse-geocode lat="{{data.latitude}}" lng="{{data.longitude}}" /></td> -->
-
+          <td><span ng-show="display">{{data.latitude}},{{data.longititude}}</span><button ng-click="getLocation()">see location</button>
+          <div ng-hide="display"><reverse-geocode lat="{{data.latitude}}" lng="{{data.longititude}}"></reverse-geocode></div></td>
 
       </tr>
   </table>

@@ -14,15 +14,6 @@ this.getAsteroidInfo=function(date){
     url: "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=zIlXift9VAR1yyq399jiX6ix21xmDhjf4LL2p0Sk?begin_date=" + date + "end_date=" + date
   })
 }
-//
-// this.getMeteoriteLanding=function(query){
-//   return $http({
-//     method:'GET',
-//     url:"https://data.nasa.gov/resource/y77d-th95.json?api_key=
-// i-n8GaT-ioXykyOVTM4RWiykey_D-2cyr8dK?year="+ query
-//
-//   })
-// }
 
 // this.getMeteoriteMap=function(){
 //   return $http({
@@ -48,10 +39,13 @@ this.getLandings = function(newQuery){
       var obj = {
         name: myResponse[i].name,
         mass: parseFloat(myResponse[i].mass),
-        type: myResponse[i].recclass
-        // latitude: myResponse[i].reclat,
-        // longititude: myResponse[i].reclong
+        type: myResponse[i].recclass,
+      latitude: myResponse[i].reclat,
+      longititude: myResponse[i].reclong
       };
+      // if(myResponse[i].reclat=== 0.00) && (myResponse[i].reclong=== 0.00){
+      //   return "not found"
+      // }
       meteoriteData.push(obj);
     }
     def.resolve(meteoriteData)

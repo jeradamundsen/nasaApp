@@ -1,20 +1,4 @@
-<div ng-controller="asteroidCtrl">
-  <div>
-    <header>
-      <h1>Will The Earch Be Destroyed By An Asteroid?</h1>
-    </header>
-  </div>
-<h4>Your Birthday Asteroid</h4>
-<input type="search" placeholder="date -can be your birthday"
 
-ng-model="beginingdate">
-
-<button type="submit" value"search" ng-click="getAsteroidInfo(date)">Search</button>
-
-<div>
-  {{nearMisses}}
-</div>
-</div>
 
 
 <!-- need close approach date close_approach_data -->
@@ -22,17 +6,3 @@ ng-model="beginingdate">
 <!-- miss distance    miss_distance -->
 
 <!-- picture of superman in his shuttle or pic of meteorite hitting the earch  -->
-<div ng-controller='mLandingsCtrl'>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <h1>Input Year To See Meteorites!</h1>
-    </div>
-  </div>
-  <form class="form-inline">
-    <div class="row">
-      <div class="col-md-2 col-md-offset-5 main-search">
-        <input ng-model="query" placeholder="4-digit year" class="form-control"><span class="help-block">Years 1801 through 2013 may be used</span>
-        <button type="button" name="button" ng-click="meteoriteLandings(query)" class="form-control btn btn-lg btn-danger">Search</button>
-      </div>
-    </div>
-  </form>
