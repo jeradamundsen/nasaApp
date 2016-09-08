@@ -26,9 +26,13 @@ body {
 .exo {
     font-family: 'Exo', sans-serif;
 }
-.finalFrontier h2, p{
+.finalFrontier h2, {
   font-family: 'Exo', sans-serif;
 
+}
+p {
+  font-family: serif;
+  line-height: 1.5;
 }
 .wrapper {
   width: 100%;
@@ -213,12 +217,32 @@ input, select, form {
 .topics a:hover {
     color: #ccedfc;
 }
-
-
-
-
+.lead {
+  font-family: serif;
 }
-
+.in-logo {
+    height: 20px;
+    line-height: 17px;
+    width: 20px;
+    margin-right: 3px;
+    margin-bottom: 4px;
+}
+.github {
+    height: 19px;
+    line-height: 18px;
+    width: 18px;
+    margin-right: 8px;
+    margin-left: -3px;
+    margin-top: 2px;
+}
+.phone {
+    height: 25px;
+    line-height: 25px;
+    width: 35px;
+    margin-right: -2px;
+    margin-left: -10px;
+    margin-bottom: 2px;
+}
 @media only screen and (max-width: 768px){
   body { margin-bottom: 400px}
   .footer {height: 400px}

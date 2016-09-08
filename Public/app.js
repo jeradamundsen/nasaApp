@@ -44,8 +44,8 @@ angular.module('nasaApp', ['ui.router', 'ngMaterial'])
                 })
                 .state('reportFireball',{
                     url:'/reportFireball',
-                    templateUrl:"./views/reportFireball.html",
-                    controller: "mainCtrl"
+                    templateUrl:"./views/reportFireball.html"
+
                 })
                 .state('thanks',{
                     url:'/thanks',
@@ -64,8 +64,8 @@ angular.module('nasaApp', ['ui.router', 'ngMaterial'])
                 })
                 .state('fireballEvents',{
                   url:'/fireballEvents',
-                  templateUrl: "./views/fireballEvents.html",
-                  controller:"mainCtrl"
+                  templateUrl: "./views/fireballEvents.html"
+
                 })
                 .state('meteoriteClassification',{
                   url: '/meteoriteClassification',
