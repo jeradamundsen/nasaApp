@@ -18,7 +18,7 @@ console.log(result)
               console.log(result)
               console.log("got Report")
               $scope.newReport= result.data
-              $scope.reportCenter.push($scope.newReport);
+              $scope.reportCenter.push(newReport);
 
         })
         //  $scope.count=count;

@@ -22,6 +22,21 @@ $scope.getLocation = function(){
   $scope.display = false;
 }
 
+$scope.showGeocode = function(){
+  $('.displayGeocode').removeClass('.hidden')
+
+}
+
+$scope.geoDataCenter=[];
+$scope.addGeoData= function(){
+  $scope.geoDataCenter.push(buildGeos())
+}
+ function buildGeos(){
+   return{
+     lat: $scope.lat,
+     lng: $scope.lng
+   }
+ }
 
 // $(document).ready(function(){
 //   $('#seeImages').on('click', 'button', function(){

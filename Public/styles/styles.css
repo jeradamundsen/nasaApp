@@ -217,31 +217,56 @@ input, select, form {
 .topics a:hover {
     color: #ccedfc;
 }
-.lead {
-  font-family: serif;
+.lead{
+  font-family: exo;
+}
+h2, h3 {
+  font-family: exo;
+}
+}
+.displayGeocode{
+  display: none;
+}
+.table-divider{
+  margin-top: 60px;
 }
 .in-logo {
-    height: 20px;
-    line-height: 17px;
-    width: 20px;
+
+    line-height: 5px;
+
     margin-right: 3px;
     margin-bottom: 4px;
+    overflow: hidden;
+}
+.well-table {
+  margin-left: 60px;
+}
+.filter input {
+padding: 0;
+margin: 0;
+}
+.table-fonts .th{
+  font-family: serif;
 }
 .github {
     height: 19px;
     line-height: 18px;
     width: 18px;
-    margin-right: 8px;
-    margin-left: -3px;
+    margin-right: 15px;
+    margin-left: 3px;
     margin-top: 2px;
 }
 .phone {
     height: 25px;
     line-height: 25px;
     width: 35px;
-    margin-right: -2px;
-    margin-left: -10px;
+    margin-right: 6px;
+    margin-left: -5px;
     margin-bottom: 2px;
+}
+p {
+  font-family: serif;
+  line-height: 1.5;
 }
 @media only screen and (max-width: 768px){
   body { margin-bottom: 400px}
