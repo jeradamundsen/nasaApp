@@ -5,23 +5,23 @@ module.exports = {
  getReports: function(req,res){
    Fireballs.find({},function(err, result){
 
-    // return res.status(200).json(result)
+    return res.status(200).json(result)
    })
-   .populate("reportedBy")
-   .exec(function(err,fireballpopulated){
-
-     return res.status(200).json(fireballpopulated);
-   })
+  //  .populate("reportedBy")
+  //  .exec(function(err,fireballpopulated){
+   //
+  //    return res.status(200).json(fireballpopulated);
+  //  })
  },
 
 
 createReport: function(req, res){
-  Fireballs.create(req.body, function(err, result){
+  Fireballs.create(req.body, function(err){
     if ( err ) {
         return res.status( 500 ).json( err );
     }
 
-    return res.status(200).json(result)
+    return res.status(200).send("success")
     })
 },
 

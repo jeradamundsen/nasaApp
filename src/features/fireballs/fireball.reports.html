@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Fireball Event Data</h2>
+  <p>This table shows recent fireball sightings</p>
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Reported By</th>
+        <th>Date</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="report in reports.reports">
+        <td ng-model="reports.report.name"><button ng-click="reports.removeReport(report)">delete</button>{{report.name}}</td>
+        <td ng-model="reports.report.date">{{report.date | date:'longDate'}}</td>
+        <td ng-model="reports.report.address">{{report.address}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

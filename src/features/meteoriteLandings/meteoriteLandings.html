@@ -1,0 +1,60 @@
+
+<div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 jumbotron">
+      <div class="text-center">
+      <h1>Input Year To See Meteorites!</h1>
+    <form class="form-inline">
+      <input ng-model="query" placeholder="4-digit year" class="form-control"><span class="help-block">Years 1801 through 2013 may be used</span>
+        <button type="button" name="button" ng-click="meteoriteLandings(query)" class="form-control btn btn-lg btn-danger">Search</button>
+  </form>
+  </div>
+  </div>
+  </div>
+</div>
+<div class="row well">
+  <div class="col-md-8">
+    <h3>Organize The Space Rocks</h3>
+  <table class="table meteoriteTable table-fonts">
+        <tr class="table-header img-responsive">
+          <th>Meteorite Name</th>
+          <th ng-click="sortData('mass')" class="specialTh">Mass(g)<div ng-class="getSortClass('mass')"></div></th>
+          <th class="filter"><label for="">Filter: <input class="text-center" type="text" id="typeM" ng-model="typeSearch" placeholder="Meteorite Type"></label></th>
+          <th>lat, long</th>
+          <th>Total Found: {{total}}</th>
+
+        </tr>
+      <tr ng-repeat="data in meteoriteDataCenter | filter:typeSearch | orderBy:sortColumn:reverseSort">
+<!-- sort by mass  sort by type sort by location like angular friends  -->
+          <td>{{data.name}}</td>
+          <td>{{data.mass}}</td>
+          <td id="seeImages" ng-model="metType">{{data.type}}
+          <td><span>{{data.latitude}}, {{data.longititude}}</span></td>
+      </tr>
+  </table>
+  </div>
+  <div class="col-md-3 col-md-offset-1 displayGeocode">
+
+      <h3>Convert Geo-coordinates To Location</h3>
+
+    <form class="displayGeocode">
+      <div class="row">
+        <div class="form-group col-md-6">
+          <input ng-model="myGeo.lat" class="form-control" type="text" placeholder="latitude"><span class="help-block" >use table lat</span>
+        </div>
+        <div class="form-group col-md-6">
+          <input ng-model="myGeo.lng" class="form-control" type="text" placeholder="longitude"><span class="help-block" >use table lng</span>
+        </div>
+        <div class="form-group col-md-6 col-md-offset-3">
+          <button class="form-control btn btn-sm btn-info" ng-click="addGeoData(myGeo)">show location</button>
+        </div>
+      </div>
+
+  </form>
+  <!-- <div>
+      <reverse-geocode lat="{{geoDataCenter.latitude}}" lng="{{geoDataCenter.longitude}}"></reverse-geocode>
+  </div> -->
+</div>
+</div>

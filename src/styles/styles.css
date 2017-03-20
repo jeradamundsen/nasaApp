@@ -1,0 +1,274 @@
+/*#header-top {
+    background-color: #0b3b62;
+    padding: 0;
+    background-image: url("http://eoimages.gsfc.nasa.gov/images/imagerecords/84000/84357/iss040e87351_lrg.jp");
+    background-size: cover;
+    background-position: 100% 50%;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}*/
+html {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100%;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+}
+body {
+  margin-bottom: 220px;
+}
+.exo {
+    font-family: 'Exo', sans-serif;
+}
+.finalFrontier h2, {
+  font-family: 'Exo', sans-serif;
+
+}
+p {
+  font-family: serif;
+  line-height: 1.5;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: grey;
+}
+#blocks{
+  margin: 20px;
+}
+.rings{
+  width: 50px;
+  height: 50px;
+  padding:0;
+  margin: 0;
+  margin-right: 5px;
+  margin-left: 0;
+}
+.wrapper
+article {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 10px;
+  flex-direction: column;
+  display: flex;
+
+}
+article h4{
+  margin: 10px 0;
+  text-align: center;
+  font-size: 20px;
+}
+#chartBox{
+  display: flex;
+  justify-content: center;
+}
+#chart{
+
+}
+#chartHeading{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+#blocks {
+  display: flex;
+}
+.img_of_day {
+  margin: 10px auto;
+}
+
+  .jumbotron{
+
+    min-height: 400px;
+    background: url("../images/meteors.jpg");
+    color: #eee;
+    background-attachment: fixed;
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+.top-row {
+  margin-top: 40px;
+}
+.cover {
+  min-height: 400px;
+  background: url("../images/real-meteor-shower.jpg");
+  color: #eee;
+  background-attachment: fixed;
+  margin-bottom: 8px;
+  margin-top: 0px;
+
+}
+.jumbotron button {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-right: 14px;
+  padding-left: 14px;
+
+}
+
+#navbab-img header{
+position: fixed;
+top: 0
+}
+
+h3 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input, select, form {
+  margin-top: 10px;
+}
+#navbar2 a{
+  justify-content: center;
+}
+.display-2{
+  text-align: center;
+}
+.navbar-default{
+  background-color: transparent;
+}
+#navbar-headerMe {
+  width: 100%;
+}
+.astronaut {
+  width: 100%/9;
+}
+.container {
+  max-width: 960;
+}
+
+/*#aboutparagraphleft{*/
+  margin-left: 20px;
+.specialTh{
+  cursor: pointer;
+}
+.yearSearch {
+  display: flex;
+  justify-content: center;
+}
+.arrow-up{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid black;
+  display: inline-block;
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid black;
+  display: inline-block;
+}
+.main-search button{
+  padding: 14px 20px;
+  margin-right: 20px;
+}
+.well {
+  background: transparent;
+}
+.lead {
+  color: #555;
+}
+.imageToUse{
+
+}
+.superman {
+  font-family: 'Sigmar One', cursive;
+}
+.features .glyphicon{
+  font-size: 32px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 220px;
+  background-color: #333;
+  color: #efefef;
+  padding: 30px 0;
+}
+.btn-lg {
+  padding: 14px 20px;
+  margin-right: 20px;
+}
+.footer a {
+  color: #1ea6ea;
+}
+.footer a:hover {
+  color: #ccedfc
+}
+.topics {
+    font-family: 'Exo', sans-serif;
+}
+.topics a{
+    color: #1ea6ea;
+}
+.topics a:hover {
+    color: #ccedfc;
+}
+.lead{
+  font-family: exo;
+}
+h2, h3 {
+  font-family: exo;
+}
+
+.displayGeocode{
+  display: none;
+}
+.table-divider{
+  margin-top: 60px;
+}
+.in-logo {
+
+    line-height: 5px;
+
+    margin-right: 3px;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+.well-table {
+  margin-left: 60px;
+}
+.filter input {
+padding: 0;
+margin: 0;
+}
+.table-fonts .th{
+  font-family: serif;
+}
+.github {
+    height: 21px;
+    line-height: 18px;
+    width: 21px;
+    margin-right: 15px;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+.phone {
+    height: 35px;
+    line-height: 25px;
+    width: 43px;
+    margin-right: 6px;
+    margin-left: -7px;
+    margin-bottom: 2px;
+}
+p {
+  font-family: serif;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 768px){
+  body { margin-bottom: 400px}
+  .footer {height: 400px}
+}

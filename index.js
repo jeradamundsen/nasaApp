@@ -4,19 +4,19 @@ var mongoose= require('mongoose');
 var UserController = require('./server/controllers/UserController');
 var landingsCtrl = require('./server/controllers/landingsCtrl');
 var fireballSightingsCtrl = require('./server/controllers/fireballSightingsCtrl');
-
+var config = require('./config');
 var app = express();
 var port= process.env.PORT || 9797;
-const mongoURI= `mongodb://fireball:geo_location@ds029735.mlab.com:29735/spaceshipdb`;
+
  // const mongoURI= `mongodb://localhost:27017/nasaApp`;
  // future database name currently called test
 
 app.use( express.static( __dirname + "/Public") );
 app.use(bodyParser.json());
 
-mongoose.connect(mongoURI);
+mongoose.connect(config.getDbConnectionString());
 mongoose.connection.once(`open`,function(){
-  console.log(`Connected to mongo at: `, mongoURI)
+  console.log(`Connected to mongo at: `, config.getDbConnectionString())
 })
 
 
