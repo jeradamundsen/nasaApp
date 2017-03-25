@@ -5,19 +5,19 @@ function routes($stateProvider) {
     .state('fireball', {
       url: '/fireball',
       template: require('./fireball.html'),
-      controller: 'fireballCtrl',
+      controller: 'fireballsCtrl',
       controllerAs: 'reports'
-    });
+    })
     .state('fireball.reports', {
       url: '/fireballReports',
       template: require('./fireball.reports.html'),
-      controller: 'fireballCtrl',
+      controller: 'fireballsCtrl',
       controllerAs: 'reports'
-    });
+    })
     .state('fireball.newFireball', {
       url: '/newFireball',
-      template: require('./newFireball.html'),
-      controller: 'fireballCtrl',
+      template: require('./fireball.newFireball.html'),
+      controller: 'fireballsCtrl',
       controllerAs: 'reports'
     });
 }

@@ -6,6 +6,6 @@ export default function routes($stateProvider) {
       url: '/meteoriteLandings',
       template: require('./meteoriteLandings.html'),
       controller: 'meteoriteLandings',
-      controllerAs: 'meteorites'
+      controllerAs: 'meteors'
     });
 }

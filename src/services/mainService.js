@@ -1,6 +1,12 @@
-angular.module('nasaApp')
-.service('mainService', function($http,$stateParams, $q){
+'use strict';
+var angular = require('angular');
 
+mainService.$inject['$http','$q','$stateParams']
+
+class mainService($http, $q, $stateParams){
+  constructor(){
+    this.
+  }
   this.getImageInfo=function(){
     return $http({
       method:'GET',
@@ -68,4 +74,9 @@ this.getReports = function(){
   })
 }
 var meteorites= []
-})
+
+}
+
+module.exports = angular.module('services.mainService',[])
+  .service('mainService', mainService)
+  .name;

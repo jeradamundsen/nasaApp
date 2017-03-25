@@ -16,6 +16,15 @@ filename: '[name].bundle.js'
 },
 module: {
   loaders: [
+    {
+      test: /\.js$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/
+    },
+    {
+      test: /jquery-1\.10\.2\.js$/,
+      loader: 'expose?jQuery'
+    },
 
     {
       test: /\.css$/,

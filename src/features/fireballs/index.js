@@ -1,10 +1,12 @@
 var angular = require('angular');
 var uiRouter = require('angular-ui-router')
 var routing = require('./fireball.routes');
-var fireballCtrl = require('./fireballCtrl');
-var mainService = require('../../services/mainService')
+var fireballsCtrl = require('./fireballsCtrl');
+var fireballsService = require('../../services/fireball.service');
 
-module.exports = angular.module('app.home', [uiRouter, mainService])
+
+
+module.exports = angular.module('nasaApp.fireball', [uiRouter, fireballsService])
   .config(routing)
-  .controller('fireballCtrl', fireballCtrl )
+  .controller('fireballsCtrl', fireballsCtrl )
   .name;
