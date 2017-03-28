@@ -1,5 +1,5 @@
 
-import angular from 'angular';
+var angular = require('angular');
 
 class FireballsService{
   constructor(){
@@ -18,6 +18,6 @@ class FireballsService{
     })
   }
 }
-export default angular.module('services.fireball',[])
+module.exports = angular.module('services.fireball',[])
   .service('fireballsService', FireballsService)
   .name;

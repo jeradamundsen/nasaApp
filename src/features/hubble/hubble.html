@@ -3,16 +3,14 @@
         <h3 class="col-lg-12">Hubble Telescope Picture Of The Day</h3>
       </div>
       <div class="row">
-        <h3 class="col-lg-12">{{imageData.title}}</h3>
+        <h3 class="col-lg-12">{{pod.title}}</h3>
       </div>
       <div class="row">
-        <img class="img_of_day" ng-src="{{imageData.hdurl}}" alt="npod">
+        <img class="img_of_day" ng-src="{{pod.hdurl}}" alt="npod">
       </div>
       <div class="row">
         <div>
-          {{imageData.explanation}}
+          {{pod.explanation}}
         </div>
       </div>
 </div>
-
-<!-- need to format so it looks like user is viewing from inside space shuttle or like its hanging on the wall.   -->

@@ -9,7 +9,7 @@ function routes($stateProvider) {
       controllerAs: 'reports'
     })
     .state('fireball.reports', {
-      url: '/fireballReports',
+      url: '/reports',
       template: require('./fireball.reports.html'),
       controller: 'fireballsCtrl',
       controllerAs: 'reports'

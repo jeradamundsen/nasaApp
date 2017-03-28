@@ -1,4 +1,4 @@
-'use strict';
+
 
 meteoriteLandings.$inject['$scope','mainService','imageService'];
 function meteoriteLandings(mainService, imageService){

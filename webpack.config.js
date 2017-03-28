@@ -8,7 +8,7 @@ devtool: 'cheap-module-source-map',
 
 entry: {
   app: path.join(__dirname, 'src','app.js'),
-  vendor: 'angular'
+  vendor: ['angular','bootstrap']
 },
 output: {
 path: path.join(__dirname,'dist'),
@@ -56,7 +56,7 @@ plugins: [
     chunks: ['commons','app']
   }),
   new commonsChunkPlugin({
-            name: "commons"
+            name: ['commons','bootstrap']
         })
 
 

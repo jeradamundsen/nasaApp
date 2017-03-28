@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>NasaApp</title>
-
+    <base href="/">
   </head>
   <body>
 <div class="navbar navbar-inverse navbar-static-top">
@@ -11,16 +11,16 @@
       <div>
         <div>
           <img class="navbar-brand rings" src="./images/space_orbital_rings.jpg">
-           <a ui-sref="about" class="navbar-brand exo">Space On Earth</a>
+           <a ui-sref="home" class="navbar-brand exo">Space On Earth</a>
 
             <ul class="nav navbar-nav navbar-right">
               <li><a ui-sref="meteoriteClassification">Ultimate Meteorite Search</a></li>
-              <li><a ui-sref="fireballEvents">Fireball Events</a></li>
+              <li><a ui-sref="fireball">Fireball Events</a></li>
               <li><a href="#" data-toggle="dropdown">More<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a ui-sref="login">Login</a></li>
-                  <li><a ui-sref="hubbleTelescope">Hubble Telescope Pictures</a></li>
-                  <li><a ui-sref="reportFireball">Report a Fireball</a></li>
+                  <li><a ui-sref="hubble">Hubble Telescope Pictures</a></li>
+                  <li><a ui-sref="fireball">Report a Fireball</a></li>
                 </ul>
               </li>
             </ul>
@@ -38,8 +38,8 @@
           <h4>Links</h4>
           <ul class="list-unstyled">
             <li><a ui-sref="meteoriteClassification">Ultimate Meeorite Search</a></li>
-            <li><a ui-sref="fireballReports"> Fireball Events</a></li>
-            <li><a ui-sref="hubbleTelescope">Hubble Pics</a></li>
+            <li><a ui-sref="fireball"> Fireball Events</a></li>
+            <li><a ui-sref="hubble">Hubble Pics</a></li>
           </ul>
         </div>
 
