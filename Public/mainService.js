@@ -15,13 +15,6 @@ this.getAsteroidInfo=function(date){
   })
 }
 
-// this.getMeteoriteMap=function(){
-//   return $http({
-//     method:'GET',
-//     url:"https://data.nasa.gov/resource/gh4g-9sfh.json?fall=fell"
-//
-//   })
-// }
 this.getMeteoriteType =function(meteoriteType){
   return $http({
     method:'GET',
@@ -42,16 +35,14 @@ this.getLandings = function(newQuery){
         type: myResponse[i].recclass,
       latitude: myResponse[i].reclat,
       longititude: myResponse[i].reclong
-      };
-      // if(myResponse[i].reclat=== 0.00) && (myResponse[i].reclong=== 0.00){
-      //   return "not found"
-      // }
+
       meteoriteData.push(obj);
     }
     def.resolve(meteoriteData)
   })
   return def.promise;
-}
+};
+
 this.createUser=function(user){
   console.log(user);
   return $http({

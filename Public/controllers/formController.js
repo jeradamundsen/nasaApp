@@ -19,6 +19,6 @@ $scope.reportCenter=[]
               $scope.reportCenter= result;
 
         })
-        //  $scope.count=count;
+        
     }
 });

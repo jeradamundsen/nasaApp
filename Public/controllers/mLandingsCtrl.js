@@ -11,12 +11,7 @@ $scope.getSortClass=function(column){
   }
   return '';
 }
-// $scope.makeLocationObj=function(location){
-//   $scope.locationObj={
-//     lat: location.latitude,
-//     lng: location.longitude
-//   }
-// }
+
 $scope.display=true;
 $scope.getLocation = function(){
   $scope.display = false;
@@ -38,18 +33,10 @@ $scope.addGeoData= function(){
    }
  }
 
-// $(document).ready(function(){
-//   $('#seeImages').on('click', 'button', function(){
-//     $(this).find('.imageToUse').slideDown();
-//   });
-//   $('#seeImages').on('click', 'viewMeteoriteImage',function(){
-//     $(this).closest('.imageToUse').find('img').show()
-//   })
-// })
-
 $scope.latitudeCenter =[]
 $scope.longitudeCenter =[]
 // query meteorite api and match type for images//
+
   $scope.meteoriteLandings= function(query){
     var newQuery = $scope.query+ "-01-01T00:00:00"
     mainService.getLandings(newQuery).then(function(meteoriteData){
