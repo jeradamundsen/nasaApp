@@ -35,10 +35,15 @@ this.getLandings = function(newQuery){
         type: myResponse[i].recclass,
       latitude: myResponse[i].reclat,
       longititude: myResponse[i].reclong
-
-      meteoriteData.push(obj);
     }
+    meteoriteData.push(obj);
+    }
+if(meteoriteData.length >0)
     def.resolve(meteoriteData)
+else{
+  def.reject('Year Not Valid')
+}
+
   })
   return def.promise;
 };

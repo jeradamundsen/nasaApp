@@ -19,10 +19,6 @@ mongoose.connection.once(`open`,function(){
   console.log(`Connected to mongo at: `, mongoURI)
 })
 
-
-
-
-
 // endpoints
 app.route('/api/user')
   .post(UserController.create)
@@ -43,12 +39,6 @@ app.route('/api/sightings')
   .get(fireballSightingsCtrl.getReports)
   .put(fireballSightingsCtrl.update)
   .delete(fireballSightingsCtrl.deleteById)
-
-
-
-
-
-
 
 app.listen(port, function(){
   console.log('Express listening on '+ port)

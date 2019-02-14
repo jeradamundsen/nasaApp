@@ -49,6 +49,8 @@ $scope.longitudeCenter =[]
 
     }
 
+  }, function(err){
+    $scope.errorMessage= err
   })
 }
 

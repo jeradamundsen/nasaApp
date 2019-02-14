@@ -80,8 +80,40 @@ article h4{
 #blocks {
   display: flex;
 }
-.img_of_day {
+{
   margin: 10px auto;
+}
+.title_hubble{
+  margin: 0px 0 10px 0;
+  font-weight: bold;
+  text-align: center;
+}
+.outer {
+    width: 100%;
+    border: 3px solid black;
+    overflow: hidden;
+    *position: relative;
+}
+.image_title{
+  margin: 10px 0 20px 0;
+}
+.inner {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+.img_of_day {
+    display: block;
+    position: relative;
+    left: -50%;
+}
+.description{
+  margin-top: 10px;
+  margin-left: -10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #d3d3d3;
+  padding: 10px 10px 10px 10px;
 }
 
   .jumbotron{
