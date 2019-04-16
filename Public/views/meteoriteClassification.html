@@ -17,6 +17,7 @@
 <div class="row well">
   <div class="col-md-7 col-md-offset-1">
     <h3>Organize The Space Rocks</h3>
+     <input ng-model="quantity">
   <table class="table meteoriteTable table-fonts">
         <tr>
           <th>Meteorite Name</th>
@@ -26,7 +27,7 @@
           <th>Total Found: {{total}}</th>
 
         </tr>
-      <tr ng-repeat="data in meteoriteDataCenter | filter:typeSearch | orderBy:sortColumn:reverseSort">
+      <tr ng-repeat="data in meteoriteDataCenter | filter:typeSearch | orderBy:sortColumn:reverseSort | limitTo: quantity">
 <!-- sort by mass  sort by type sort by location like angular friends  -->
           <td>{{data.name}}</td>
           <td>{{data.mass}}</td>

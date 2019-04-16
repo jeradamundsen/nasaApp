@@ -2,8 +2,9 @@ angular.module('nasaApp')
     .controller('mainCtrl', function($scope, $http, $state, mainService, $stateParams) {
 
     $scope.getImageData = function() {
-        mainService.getImageInfo().then(function(response) {
-          $scope.imageData = response.data;
+        mainService.getImageInfo().then(function(hubble) {
+          console.log(hubble)
+          $scope.imageData = hubble;
             })
         }
     $scope.createUser = function(user) {
@@ -17,6 +18,6 @@ angular.module('nasaApp')
           });
         };
 
-  
+
 
     });
